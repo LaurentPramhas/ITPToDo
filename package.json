@@ -1,18 +1,17 @@
 {
   "name": "my-app",
   "version": "1.0.0",
-  
   "scripts": {
-  "dev": "parcel src/index.html",
-  "build": "parcel build src/index.html"
-},
-
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "description": "",
   "devDependencies": {
-    "parcel": "^2.14.2"
+    "parcel": "^2.14.2",
+    "typescript": "^5.8.3"
   }
 }
