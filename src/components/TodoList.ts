@@ -1,6 +1,6 @@
 import { TodoItem } from "./TodoItem";
 
-export function TodoList(todos, onToggle, onDelete) {
+export function todoList(todos, onToggle, onDelete) {
   
   var listElement = document.createElement("ul");
 
