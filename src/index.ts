@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const formElement = document.getElementById("todo-form") as HTMLFormElement;
   const inputElement = document.getElementById("todo-input") as HTMLInputElement;
   const listContainer = document.getElementById("todo-list") as HTMLUListElement;
+  const imageContainer = document.getElementById("image") as HTMLDivElement;
 
   // Bild-Element erstellen
   const imageElement = document.createElement("img");
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   imageElement.alt = "Beispielbild";
   imageElement.style.width = "100px"; // Bildgröße einstellen
 
+  imageContainer.innerHTML = "<img src='" + bildUrl + "' alt='Beispielbild' style='width: 100px;'>";
   // Bild an den Anfang von <main> einfügen
   const mainElement = document.querySelector("main");
   if (mainElement !== null) {
