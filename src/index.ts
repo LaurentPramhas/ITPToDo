@@ -1,5 +1,7 @@
 import { todoList } from "./components/TodoList";
-import bildUrl from "./img/list.jpg"; // Bild wird importiert
+
+// Bild-URL korrekt auflösen – funktioniert 100 % in Dev & Build
+const bildUrl = new URL("./img/list.jpg", import.meta.url).href;
 
 interface Todo {
   text: string;
@@ -12,14 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const listContainer = document.getElementById("todo-list") as HTMLUListElement;
   const imageContainer = document.getElementById("image") as HTMLDivElement;
 
-  // Bild-Element erstellen
-  const imageElement = document.createElement("img");
-  imageElement.src = bildUrl; // Bild-URL von Parcel verwenden
-  imageElement.alt = "Beispielbild";
-  imageElement.style.width = "100px"; // Bildgröße einstellen
 
-  imageContainer.innerHTML = "<img src='" + bildUrl + "' alt='Beispielbild' style='width: 100px;'>";
-  // Bild an den Anfang von <main> einfügen
+  
+  const imageElement = document.createElement("img");
+  imageElement.src = bildUrl;
+  imageElement.alt = "Beispielbild";
+  imageElement.style.width = "100px";
+
   const mainElement = document.querySelector("main");
   if (mainElement !== null) {
     mainElement.insertBefore(imageElement, mainElement.firstChild);
