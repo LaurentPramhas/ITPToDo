@@ -2,19 +2,11 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <title>Todo App</title>
+    <title>To-do App</title>
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <main>
-      <h1>📝 Meine To-do Liste</h1>
-      <form id="todo-form">
-        <input type="text" id="todo-input" placeholder="Neue Aufgabe..." required />
-        <button type="submit">Hinzufügen</button>
-      </form>
-      <ul id="todo-list"></ul>
-      <div id="image"></div>
-    </main>
-    <script type="module" src="./src/index.ts"></script>
+    <todo-app></todo-app>
+    <script type="module" src="./src/elements/todo-app.ts"></script>
   </body>
 </html>
